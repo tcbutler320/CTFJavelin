@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="Sasquatch" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="372.0" prefWidth="333.0">
+         <children>
+            <Accordion layoutX="6.0" prefHeight="372.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <panes>
+                <TitledPane animated="false" text="Reconnaissance">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TilePane layoutX="337.4" layoutY="2.4000000000000004" prefHeight="262.0" prefWidth="238.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="327.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="-8.0" />
+                              <ToggleButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="ToggleButton" />
+                              <ToggleButton layoutX="14.0" layoutY="50.0" mnemonicParsing="false" text="ToggleButton" />
+                              <CheckBox layoutX="20.0" layoutY="86.0" mnemonicParsing="false" text="CheckBox" />
+                              <CheckBox layoutX="20.0" layoutY="114.0" mnemonicParsing="false" text="CheckBox" />
+                              <Button layoutX="20.0" layoutY="151.0" mnemonicParsing="false" text="Button" />
+                              <Button layoutX="20.0" layoutY="184.0" mnemonicParsing="false" text="Button" />
+                              <Button layoutX="20.0" layoutY="217.0" mnemonicParsing="false" text="Button" />
+                              <ChoiceBox layoutX="89.0" layoutY="151.0" prefWidth="150.0" />
+                              <ChoiceBox layoutX="89.0" layoutY="184.0" prefWidth="150.0" />
+                              <ChoiceBox layoutX="89.0" layoutY="217.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Weaponization">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Future Feature">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+         </children></AnchorPane>
+  </content>
+</TitledPane>
