@@ -13,16 +13,16 @@ public class SystemCall {
      * @param argument
      * @return
      */
+
+
     public String SystemCall(String argument) {
 
         String s = null;
+        String fullString = null;
 
         try {
 
-            // run the Unix "ps -ef" command
-            // using the Runtime exec method:
             Process p = Runtime.getRuntime().exec(argument);
-
             BufferedReader stdInput = new BufferedReader(new
                     InputStreamReader(p.getInputStream()));
 
@@ -30,20 +30,20 @@ public class SystemCall {
                     InputStreamReader(p.getErrorStream()));
 
             // read the output from the command
-            System.out.println("Here is the standard output of the command:\n");
             while ((s = stdInput.readLine()) != null) {
                 System.out.println(s);
+                fullString += s;
             }
-
+            System.out.println("where am i");
             // read any errors from the attempted command
-            System.out.println("Here is the standard error of the command (if any):\n");
             while ((s = stdError.readLine()) != null) {
                 System.out.println(s);
             }
 
+            System.out.println("This is the final String, Lets test \n"+s);
             System.exit(0);
         } catch (IOException e) {
-            System.out.println("exception happened - here's what I know: ");
+            System.out.println("{!} Error:\n");
             e.printStackTrace();
             System.exit(-1);
         }
