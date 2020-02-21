@@ -28,6 +28,9 @@ Sasquatch uses the Java FX GUI platform and requires the following Java FX class
 
 ### Development
 
+#### UI 
+Theme Elements were picked from [Color Hunt](https://colorhunt.com/)
+
 
 ### Contributing 
 Contributing is welcome, please feel free to fork and pull to add your own features or drop feature requests by submitting an issue. 
