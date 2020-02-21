@@ -1,0 +1,4 @@
+# exclude everything except directory foo/bar
+.env
+# Exclude samples folder 
+samples/
