@@ -41,7 +41,6 @@ public class SystemCall {
             }
 
             System.out.println("This is the final String, Lets test \n"+s);
-            System.exit(0);
         } catch (IOException e) {
             System.out.println("{!} Error:\n");
             e.printStackTrace();

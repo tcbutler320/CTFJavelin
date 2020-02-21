@@ -1,6 +1,7 @@
 package io.tylerbutler.tools;
 
 import io.tylerbutler.utils.*;
+import javafx.application.Platform;
 
 public class TerminalNavigation {
     SystemCall sysCall = new SystemCall();
