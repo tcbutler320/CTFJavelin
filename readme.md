@@ -1,5 +1,6 @@
-# Sasquatch 
+# Sasquatch <img src="https://img.shields.io/github/v/release/tcbutler320/Sasquatch?include_prereleases" alt="drawing" width="125"/>
 ![](https://travis-ci.com/tcbutler320/Sasquatch.svg?branch=master) 
+
 
 
 A GUI Java application for Capture the Flag competitors
