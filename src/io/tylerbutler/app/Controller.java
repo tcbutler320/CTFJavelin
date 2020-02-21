@@ -1,4 +1,4 @@
-package sample;
+package io.tylerbutler.app;
 
 import io.tylerbutler.tools.TerminalNavigation;
 import javafx.application.Platform;
