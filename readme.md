@@ -1,4 +1,7 @@
-# Sasquatch
+# Sasquatch 
+![](https://travis-ci.com/tcbutler320/Sasquatch.svg?branch=master) 
+
+
 A GUI Java application for Capture the Flag competitors
 
 ![](assets/images/sasquatch-redWoods-v0.01.png)
