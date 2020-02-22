@@ -2,7 +2,7 @@
 
 A GUI Java application for Capture the Flag competitors  
 
-![](assets/images/sasquatch-redWoods-v0.01.png)
+![](assets/images/sasquatch-redWoods-v0.02.png)
 
 
 ### About 

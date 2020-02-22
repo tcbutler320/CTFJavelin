@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Main" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="io.tylerbutler.app.Main" />
+    <module name="Sasquatch" />
+    <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../../javafx-sdk-13.0.2/lib/ --add-modules javafx.controls,javafx.fxml,javafx.base,javafx.graphics --add-exports javafx.graphics/com.sun.javafx.sg.prism=ALL-UNNAMED" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="sample.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <RunnerSettings RunnerId="Run" />
+    <ConfigurationWrapper RunnerId="Run" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
