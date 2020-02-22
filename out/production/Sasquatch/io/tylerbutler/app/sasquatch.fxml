@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -70,233 +72,270 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <TabPane prefHeight="369.5" prefWidth="398.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                          <tabs>
-                              <Tab text="Settings">
-                                <content>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                       <children>
-                                          <Accordion layoutX="-5.0" prefHeight="336.5" prefWidth="191.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                            <panes>
-                                              <TitledPane animated="false" text="Target">
-                                                <content>
-                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                                </content>
-                                              </TitledPane>
-                                              <TitledPane animated="false" text="System Config">
-                                                <content>
-                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                                </content>
-                                              </TitledPane>
-                                              <TitledPane animated="false" text="User Settings">
-                                                <content>
-                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                                </content>
-                                              </TitledPane>
-                                            </panes>
-                                          </Accordion>
-                                       </children>
-                                    </AnchorPane>
-                                </content>
-                              </Tab>
-                            <Tab text="Recon">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                       <children>
-                                          <Accordion layoutX="-11.0" layoutY="64.0" prefHeight="336.5" prefWidth="191.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                            <panes>
-                                              <TitledPane animated="false" text="Network Scan">
-                                                <content>
-                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                                         <children>
-                                                            <VBox layoutX="14.0" layoutY="14.0" prefHeight="227.5" prefWidth="189.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                               <children>
-                                                                  <Button mnemonicParsing="false" text="Quick Nmap" />
-                                                                  <Button mnemonicParsing="false" text="Nmap UDP" />
-                                                                  <Button mnemonicParsing="false" text="Nmap Service Detection" />
-                                                                  <Button mnemonicParsing="false" text="Full Nmap" />
-                                                                  <Button mnemonicParsing="false" text="Arp Scan" />
-                                                                  <Button mnemonicParsing="false" text="Net Stat" />
-                                                               </children>
-                                                            </VBox>
-                                                         </children>
-                                                      </AnchorPane>
-                                                </content>
-                                              </TitledPane>
-                                              <TitledPane animated="false" text="Linux Enum">
-                                                <content>
-                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                                </content>
-                                              </TitledPane>
-                                              <TitledPane animated="false" text="Windows Enum">
-                                                <content>
-                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                                </content>
-                                              </TitledPane>
-                                                <TitledPane animated="false" layoutX="10.0" layoutY="64.0" text="Web Server Enum">
-                                                   <content>
-                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                                   </content>
-                                                </TitledPane>
-                                            </panes>
-                                          </Accordion>
-                                       </children></AnchorPane>
-                              </content>
-                            </Tab>
-                              <Tab text="Attack">
-                                 <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                       <children>
-                                          <Accordion layoutX="37.0" layoutY="65.0" prefHeight="336.5" prefWidth="384.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                            <panes>
-                                              <TitledPane animated="false" text="Brute Force">
-                                                <content>
-                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                                         <children>
-                                                            <FlowPane layoutX="8.0" layoutY="14.0" prefHeight="254.5" prefWidth="382.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                               <children>
-                                                                  <VBox prefHeight="233.0" prefWidth="100.0">
+                        <SplitPane dividerPositions="0.710204081632653" orientation="VERTICAL" prefHeight="369.5" prefWidth="191.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TabPane prefHeight="180.0" prefWidth="189.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <tabs>
+                                          <Tab text="Settings">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Accordion layoutX="-5.0" prefHeight="336.5" prefWidth="398.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <panes>
+                                                          <TitledPane animated="false" text="Target">
+                                                            <content>
+                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                                      <children>
-                                                                        <Button mnemonicParsing="false" text="Hydra" VBox.vgrow="ALWAYS" />
+                                                                        <VBox layoutX="14.0" prefHeight="254.5" prefWidth="396.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <children>
+                                                                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="169.0" text="Enter Target" textAlignment="CENTER" />
+                                                                              <TextArea prefHeight="31.0" prefWidth="169.0" promptText="ex: 192.168.1.1">
+                                                                                 <VBox.margin>
+                                                                                    <Insets top="5.0" />
+                                                                                 </VBox.margin>
+                                                                              </TextArea>
+                                                                              <Button fx:id="setTargetBtn" mnemonicParsing="false" onMouseClicked="#setTarget" text="Set Target">
+                                                                                 <VBox.margin>
+                                                                                    <Insets top="5.0" />
+                                                                                 </VBox.margin>
+                                                                              </Button>
+                                                                              <Button mnemonicParsing="false" text="Clear Targets">
+                                                                                 <VBox.margin>
+                                                                                    <Insets top="5.0" />
+                                                                                 </VBox.margin>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </VBox>
                                                                      </children>
-                                                                  </VBox>
+                                                                  </AnchorPane>
+                                                            </content>
+                                                          </TitledPane>
+                                                          <TitledPane animated="false" text="System Config">
+                                                            <content>
+                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                            </content>
+                                                          </TitledPane>
+                                                          <TitledPane animated="false" text="User Settings">
+                                                            <content>
+                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                            </content>
+                                                          </TitledPane>
+                                                        </panes>
+                                                      </Accordion>
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                        <Tab text="Recon">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Accordion layoutX="-11.0" layoutY="64.0" prefHeight="336.5" prefWidth="191.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <panes>
+                                                          <TitledPane animated="false" text="Network Scan">
+                                                            <content>
+                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <VBox layoutX="14.0" layoutY="14.0" prefHeight="227.5" prefWidth="189.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <children>
+                                                                              <Button mnemonicParsing="false" text="Quick Nmap" />
+                                                                              <Button mnemonicParsing="false" text="Nmap UDP" />
+                                                                              <Button mnemonicParsing="false" text="Nmap Service Detection" />
+                                                                              <Button mnemonicParsing="false" text="Full Nmap" />
+                                                                              <Button mnemonicParsing="false" text="Arp Scan" />
+                                                                              <Button mnemonicParsing="false" text="Net Stat" />
+                                                                           </children>
+                                                                        </VBox>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                            </content>
+                                                          </TitledPane>
+                                                          <TitledPane animated="false" text="Linux Enum">
+                                                            <content>
+                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                            </content>
+                                                          </TitledPane>
+                                                          <TitledPane animated="false" text="Windows Enum">
+                                                            <content>
+                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                            </content>
+                                                          </TitledPane>
+                                                            <TitledPane animated="false" layoutX="10.0" layoutY="64.0" text="Web Server Enum">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                               </content>
+                                                            </TitledPane>
+                                                        </panes>
+                                                      </Accordion>
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                          <Tab text="Attack">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Accordion layoutX="37.0" layoutY="65.0" prefHeight="336.5" prefWidth="384.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <panes>
+                                                          <TitledPane animated="false" text="Brute Force">
+                                                            <content>
+                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <FlowPane layoutX="8.0" layoutY="14.0" prefHeight="254.5" prefWidth="382.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <children>
+                                                                              <VBox prefHeight="233.0" prefWidth="100.0">
+                                                                                 <children>
+                                                                                    <Button mnemonicParsing="false" text="Hydra" VBox.vgrow="ALWAYS" />
+                                                                                 </children>
+                                                                              </VBox>
+                                                                           </children>
+                                                                        </FlowPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                            </content>
+                                                          </TitledPane>
+                                                          <TitledPane animated="false" text="Metasploit">
+                                                            <content>
+                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <ListView layoutX="10.0" prefHeight="254.5" prefWidth="189.0" AnchorPane.bottomAnchor="20.80000000000001" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.800000000000011" AnchorPane.topAnchor="0.0" />
+                                                                        <Button layoutX="20.0" layoutY="14.0" mnemonicParsing="false" text="Button" />
+                                                                        <Button layoutX="20.0" layoutY="41.0" mnemonicParsing="false" text="Button" />
+                                                                        <Button layoutX="75.0" layoutY="14.0" mnemonicParsing="false" text="Button" />
+                                                                        <Button layoutX="75.0" layoutY="41.0" mnemonicParsing="false" text="Button" />
+                                                                        <ChoiceBox layoutX="20.0" layoutY="68.0" prefHeight="27.0" prefWidth="144.0" />
+                                                                        <Hyperlink layoutX="21.0" layoutY="95.0" text="Hyperlink" />
+                                                                        <RadioButton layoutX="29.0" layoutY="194.0" mnemonicParsing="false" text="RadioButton" />
+                                                                        <RadioButton layoutX="29.0" layoutY="169.0" mnemonicParsing="false" text="RadioButton" />
+                                                                        <ToggleButton layoutX="28.0" layoutY="134.0" mnemonicParsing="false" text="ToggleButton" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                            </content>
+                                                          </TitledPane>
+                                                          <TitledPane animated="false" text="Test">
+                                                            <content>
+                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <GridPane layoutX="-25.0" layoutY="37.0" prefHeight="254.5" prefWidth="189.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                          <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                          </columnConstraints>
+                                                                          <rowConstraints>
+                                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                          </rowConstraints>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                            </content>
+                                                          </TitledPane>
+                                                        </panes>
+                                                      </Accordion>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Priv Esc">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <SplitPane dividerPositions="0.32884902840059793" orientation="VERTICAL" prefHeight="336.5" prefWidth="306.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <items>
+                                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                               <children>
+                                                                  <GridPane layoutY="-14.0" prefHeight="276.5" prefWidth="304.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-14.0">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="4" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="3" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                                     </children>
+                                                                  </GridPane>
                                                                </children>
-                                                            </FlowPane>
-                                                         </children>
-                                                      </AnchorPane>
-                                                </content>
-                                              </TitledPane>
-                                              <TitledPane animated="false" text="Metasploit">
-                                                <content>
-                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                                         <children>
-                                                            <ListView layoutX="10.0" prefHeight="254.5" prefWidth="189.0" AnchorPane.bottomAnchor="20.80000000000001" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.800000000000011" AnchorPane.topAnchor="0.0" />
-                                                            <Button layoutX="20.0" layoutY="14.0" mnemonicParsing="false" text="Button" />
-                                                            <Button layoutX="20.0" layoutY="41.0" mnemonicParsing="false" text="Button" />
-                                                            <Button layoutX="75.0" layoutY="14.0" mnemonicParsing="false" text="Button" />
-                                                            <Button layoutX="75.0" layoutY="41.0" mnemonicParsing="false" text="Button" />
-                                                            <ChoiceBox layoutX="20.0" layoutY="68.0" prefHeight="27.0" prefWidth="144.0" />
-                                                            <Hyperlink layoutX="21.0" layoutY="95.0" text="Hyperlink" />
-                                                            <RadioButton layoutX="29.0" layoutY="194.0" mnemonicParsing="false" text="RadioButton" />
-                                                            <RadioButton layoutX="29.0" layoutY="169.0" mnemonicParsing="false" text="RadioButton" />
-                                                            <ToggleButton layoutX="28.0" layoutY="134.0" mnemonicParsing="false" text="ToggleButton" />
-                                                         </children>
-                                                      </AnchorPane>
-                                                </content>
-                                              </TitledPane>
-                                              <TitledPane animated="false" text="Test">
-                                                <content>
-                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                                         <children>
-                                                            <GridPane layoutX="-25.0" layoutY="37.0" prefHeight="254.5" prefWidth="189.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                              <columnConstraints>
-                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                              </columnConstraints>
-                                                              <rowConstraints>
-                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                              </rowConstraints>
-                                                            </GridPane>
-                                                         </children>
-                                                      </AnchorPane>
-                                                </content>
-                                              </TitledPane>
-                                            </panes>
-                                          </Accordion>
-                                       </children>
-                                    </AnchorPane>
-                                 </content>
-                              </Tab>
-                              <Tab text="Priv Esc">
-                                 <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                       <children>
-                                          <SplitPane dividerPositions="0.32884902840059793" orientation="VERTICAL" prefHeight="336.5" prefWidth="306.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                             <items>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                                   <children>
-                                                      <GridPane layoutY="-14.0" prefHeight="276.5" prefWidth="304.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-14.0">
-                                                         <columnConstraints>
-                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                         </columnConstraints>
-                                                         <rowConstraints>
-                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                         </rowConstraints>
-                                                         <children>
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="4" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="3" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                                                         </children>
-                                                      </GridPane>
+                                                            </AnchorPane>
+                                                         </items>
+                                                      </SplitPane>
                                                    </children>
                                                 </AnchorPane>
-                                             </items>
-                                          </SplitPane>
-                                       </children>
-                                    </AnchorPane>
-                                 </content>
-                              </Tab>
-                              <Tab text="Exfil">
-                                 <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                       <children>
-                                          <SplitPane dividerPositions="0.32884902840059793" orientation="VERTICAL" prefHeight="336.5" prefWidth="306.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                             <items>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Exfil">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <GridPane layoutX="34.0" layoutY="73.0" prefHeight="276.5" prefWidth="304.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                         <columnConstraints>
-                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                         </columnConstraints>
-                                                         <rowConstraints>
-                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                         </rowConstraints>
-                                                         <children>
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="4" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="3" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                                                            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                                                         </children>
-                                                      </GridPane>
+                                                      <SplitPane dividerPositions="0.32884902840059793" orientation="VERTICAL" prefHeight="336.5" prefWidth="306.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <items>
+                                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                               <children>
+                                                                  <GridPane layoutX="34.0" layoutY="73.0" prefHeight="276.5" prefWidth="304.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="4" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="3" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                                                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </items>
+                                                      </SplitPane>
                                                    </children>
                                                 </AnchorPane>
-                                             </items>
-                                          </SplitPane>
-                                       </children>
-                                    </AnchorPane>
-                                 </content>
-                              </Tab>
-                          </tabs>
-                        </TabPane>
+                                             </content>
+                                          </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextArea fx:id="cmdQueTArea" layoutX="-40.0" layoutY="-64.0" prefHeight="179.5" prefWidth="189.0" promptText="comands queue here ..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
@@ -340,6 +379,11 @@
                                                       <TextArea layoutY="-36.0" prefHeight="106.0" prefWidth="404.0" promptText="Target 1: 192.168.1.1 ..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                    </children>
                                                 </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab text="Automated Discovery">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                                             </content>
                                           </Tab>
                                       </tabs>
