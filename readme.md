@@ -2,8 +2,7 @@
 
 A GUI Java application for Capture the Flag competitors  
 
-![](assets/images/sasquatch-redWoods-v0.02.png)
-
+![](assets/gif/redWoods-v0.2.gif)
 
 ### About 
 Sasquatch is the first penetration testing tool designed specifically for CTF competitors. It is not a stand-alone application, behind the hood, Sasquatch passes each command as bash arguments to Kali Linux, receives the output and displays and organizes the information. Store important CTF related information like targets, team workspaces, as well as rules and regulations.
@@ -28,6 +27,9 @@ Sasquatch uses the Java FX GUI platform and requires the following Java FX class
  + javafx.scene.input.MouseEvent;
 
 ### Features
+
+![](assets/images/sasquatch-redWoods-v0.02.png)
+
 
 #### Recon
 
