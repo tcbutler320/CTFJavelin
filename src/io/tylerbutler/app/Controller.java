@@ -2,12 +2,12 @@ package io.tylerbutler.app;
 
 import io.tylerbutler.test.TargetSettingsTest;
 import io.tylerbutler.tools.TerminalNavigation;
-import javafx.application.Platform;
+import io.tylerbutler.utils.CTFDocumentation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 
@@ -20,23 +20,26 @@ public class Controller {
     }
 
     @FXML
+    private MenuItem mBarNew;
+
+    @FXML
+    private TextArea targetTextField;
+
+    @FXML
     private Button setTargetBtn;
 
     @FXML
     private TextArea cmdQueTArea;
 
     @FXML
-    void setTarget(MouseEvent event) {
-        cmdQueTArea.setText(TargetSettingsTest.targetSettingsTest());
+    void createProject(ActionEvent event) {
+        CTFDocumentation.newProject();
     }
 
-    // TODO remove display method with working method
+
     @FXML
-    void clickLS(MouseEvent event) {
-        TerminalNavigation tn = new TerminalNavigation();
-        String test = tn.getLs();
-        Platform.runLater(() -> {
-//            display.setText(display.getText() + "log n°2 ...");
-        });
+    void setTarget(MouseEvent event) {
+        cmdQueTArea.appendText("\n"+TargetSettingsTest.targetSettingsTest(targetTextField.getText()));
     }
+
 }

@@ -31,7 +31,7 @@
       <menus>
         <Menu mnemonicParsing="false" style="-fx-text-fill: white" text="File">
           <items>
-            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem fx:id="mBarNew" mnemonicParsing="false" onAction="#createProject" onMenuValidation="#createProject" text="New" />
             <MenuItem mnemonicParsing="false" text="Open…" />
             <Menu mnemonicParsing="false" text="Open Recent" />
             <SeparatorMenuItem mnemonicParsing="false" />
@@ -91,7 +91,7 @@
                                                                         <VBox layoutX="14.0" prefHeight="254.5" prefWidth="396.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                            <children>
                                                                               <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="169.0" text="Enter Target" textAlignment="CENTER" />
-                                                                              <TextArea prefHeight="31.0" prefWidth="169.0" promptText="ex: 192.168.1.1">
+                                                                              <TextArea fx:id="targetTextField" prefHeight="31.0" prefWidth="169.0" promptText="ex: 192.168.1.1">
                                                                                  <VBox.margin>
                                                                                     <Insets top="5.0" />
                                                                                  </VBox.margin>
