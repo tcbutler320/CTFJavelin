@@ -140,7 +140,7 @@
                                                                      <children>
                                                                         <VBox layoutX="14.0" layoutY="14.0" prefHeight="227.5" prefWidth="189.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                            <children>
-                                                                              <Button mnemonicParsing="false" text="Quick Nmap" />
+                                                                              <Button fx:id="qNmapBtn" mnemonicParsing="false" onMouseClicked="#qNmapLaunch" text="Quick Nmap" />
                                                                               <Button mnemonicParsing="false" text="Nmap UDP" />
                                                                               <Button mnemonicParsing="false" text="Nmap Service Detection" />
                                                                               <Button mnemonicParsing="false" text="Full Nmap" />
@@ -398,7 +398,7 @@
                                           <content>
                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <TextArea layoutX="34.0" layoutY="-12.0" prefHeight="187.5" prefWidth="404.0" promptText="* Starting nmap scan for 192.168.1.1 ...." text="root@kali $ nmap -A -T4 192.168.1.1&#10;&#10;Starting Nmap ( http://nmap.org )&#10;Nmap scan report for felix (127.0.0.1)&#10;(The 1640 ports scanned but not shown below are in state: closed)&#10;PORT     STATE SERVICE    VERSION&#10;21/tcp   open  ftp        WU-FTPD wu-2.6.1-20&#10;22/tcp   open  ssh        OpenSSH 3.1p1 (protocol 1.99)&#10;53/tcp   open  domain     ISC BIND 9.2.1&#10;79/tcp   open  finger     Linux fingerd&#10;111/tcp  open  rpcbind    2 (rpc #100000)&#10;443/tcp  open  ssl/http   Apache httpd 2.0.39 ((Unix) mod_perl/1.99_04-dev)&#10;515/tcp  open  printer&#10;631/tcp  open  ipp        CUPS 1.1&#10;953/tcp  open  rndc?&#10;5000/tcp open  ssl/ftp    WU-FTPD wu-2.6.1-20&#10;5001/tcp open  ssl/ssh    OpenSSH 3.1p1 (protocol 1.99)&#10;5002/tcp open  ssl/domain ISC BIND 9.2.1&#10;5003/tcp open  ssl/finger Linux fingerd&#10;6000/tcp open  X11        (access denied)&#10;8000/tcp open  http-proxy Junkbuster webproxy&#10;8080/tcp open  http       Apache httpd 2.0.39 ((Unix) mod_perl/1.99_04-dev)&#10;8081/tcp open  http       Apache httpd 2.0.39 ((Unix) mod_perl/1.99_04-dev)&#10;Device type: general purpose&#10;Running: Linux 2.4.X|2.5.X&#10;OS details: Linux Kernel 2.4.0 - 2.5.20&#10;&#10;Nmap finished: 1 IP address (1 host up) scanned in 42.494 seconds" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <TextArea fx:id="mainOutput" layoutX="34.0" layoutY="-12.0" prefHeight="187.5" prefWidth="404.0" promptText="* Starting nmap scan for 192.168.1.1 ...." wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                    </children>
                                                 </AnchorPane>
                                           </content>

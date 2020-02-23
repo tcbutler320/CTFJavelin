@@ -1,6 +1,7 @@
 package io.tylerbutler.app;
 
 import io.tylerbutler.test.TargetSettingsTest;
+import io.tylerbutler.test.TestConstants;
 import io.tylerbutler.tools.TerminalNavigation;
 import io.tylerbutler.utils.CTFDocumentation;
 import javafx.event.ActionEvent;
@@ -36,8 +37,21 @@ public class Controller {
         CTFDocumentation.newProject();
     }
 
+    // Output area for commands
+    @FXML
+    private TextArea mainOutput;
 
     @FXML
+    private Button qNmapBtn;
+
+    @FXML
+    void qNmapLaunch(MouseEvent event) {
+        mainOutput.appendText(TestConstants.MAINOUTPUT_PRE_PROCESSING_EXAMPLE);
+
+    }
+
+
+        @FXML
     void setTarget(MouseEvent event) {
         cmdQueTArea.appendText("\n"+TargetSettingsTest.targetSettingsTest(targetTextField.getText()));
     }
